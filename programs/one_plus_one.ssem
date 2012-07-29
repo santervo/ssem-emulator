@@ -1,0 +1,6 @@
+2005 ;LDN 5
+4005 ;SUB 5
+3005 ;STO 5
+2005 ;LDN 5
+7000 ;STP
+1 ; initial value
