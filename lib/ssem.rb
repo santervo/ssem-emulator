@@ -35,6 +35,8 @@ class Ssem
     instruction = (@ir >> 12) & 7
     address = @ir & 0xfff
     case instruction
+    when JMP
+      @pc = address
     when LDN
       @acc = -@mem[address]
     when STO
