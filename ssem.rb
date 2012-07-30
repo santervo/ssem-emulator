@@ -20,7 +20,7 @@ class Ssem
   end
 
   def run
-    while !@stop
+    until @stop
       self.fetch
       self.execute
       self.increment
@@ -64,7 +64,7 @@ file_name = ARGV[0]
 mem = Array.new
 file = File.new(file_name, "r")
 while(line = file.gets)
-  mem << line.to_i(16)
+  mem << line.split(" ")[0].to_i(16)
 end
 
 ssem = Ssem.new(mem)
